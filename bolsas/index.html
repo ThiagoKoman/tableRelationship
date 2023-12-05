@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversões Paulo Macan</title>
+
+        <link rel="stylesheet" href="../style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script src="./procedure.js" defer></script>
+        <script src="../script.js" defer></script>
+    </head>
+    <body>
+        <div id="pass_1">
+            <h2>Passo 1 - Subir o arquivo xlsx</h2>
+            <input type="file" id="file-input" accept=".xlsx">
+            <button onclick="convertToJSON()">Converter para JSON</button>
+            <pre id="json-output"></pre>
+        </div>
+
+        <div id="pass_2">
+            <h2>Passo 2 - Seleção de colunas a serem relacionadas</h2>
+            <select id="select_1"></select>
+            <select id="select_2"></select>
+            <button onclick="generateArchives()">Gerar arquivos</button>
+        </div>
+
+        <div id="pass_3">
+            <h2>Passo 3 - Download das planilhas geradas</h2>
+            <p>Para conseguir acessar as planilhas será necessário atualizar seu nome, adicionando manualmente a extensão ".xlsx" ao final do nome do arquivo;</p>
+        </div>
+    
+    </body>
+</html>
